@@ -144,6 +144,7 @@
                         <th>ID</th>
                         <th>Employee Name</th>
                         <th>Email</th>
+                        <th>Phone</th>
                         <th>Department</th>
                         <th>Joining Date</th>
                         <th>Actions</th>
@@ -162,6 +163,8 @@
                             </td>
 
                             <td>{{ $employee->email }}</td>
+                            
+                            <td>{{ $employee->phone ?: 'N/A' }}</td>
 
                             <td>
                                 <span class="badge bg-primary">
@@ -200,7 +203,7 @@
                     @empty
 
                         <tr>
-                            <td colspan="6" class="text-center text-secondary py-4">
+                            <td colspan="7" class="text-center text-secondary py-4">
                                 No employees found.
                             </td>
                         </tr>
